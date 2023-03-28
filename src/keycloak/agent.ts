@@ -1,8 +1,8 @@
 import { isUndefined, last, omit, pick } from "lodash";
-import { KeycloakAdminClient } from "./client.js";
+import { KeycloakAdminClient } from "./client";
 
 import { fetchWithError, NetworkError, parseResponse } from "./utils/fetchWithErrors";
-import { stringifyQueryParams } from "./utils/stringifyQueryParams.js";
+import { stringifyQueryParams } from "./utils/stringifyQueryParams";
 
 // constants
 const SLASH = "/";

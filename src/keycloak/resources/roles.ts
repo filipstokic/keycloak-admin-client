@@ -1,8 +1,8 @@
-import Resource from './resource.js';
-import type RoleRepresentation from '../defs/roleRepresentation.js';
-// import type UserRepresentation from '../defs/userRepresentation.js';
-import type { KeycloakAdminClient } from '../client.js';
-import type { ManagementPermissionReference } from '../defs/managementPermissionReference.js';
+import Resource from './resource';
+import type RoleRepresentation from '../defs/roleRepresentation';
+// import type UserRepresentation from '../defs/userRepresentation';
+import type { KeycloakAdminClient } from '../client';
+import type { ManagementPermissionReference } from '../defs/managementPermissionReference';
 
 export interface RoleQuery {
   first?: number;
