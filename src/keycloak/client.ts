@@ -1,6 +1,7 @@
 import { RequestArgs } from "./agent";
 import { Credentials, getToken } from "./auth";
 import { Roles } from "./resources/roles";
+import { Users } from "./resources/users";
 
 export interface ConnectionConfig {
   baseUrl?: string;
@@ -21,6 +22,7 @@ export class KeycloakAdminClient {
   public refreshToken?: string;
 
   public roles: Roles;
+  public users: Users;
 
   private requestOptions?: RequestInit;
   private globalRequestArgOptions?: Pick<RequestArgs, "catchNotFound">;
@@ -32,6 +34,7 @@ export class KeycloakAdminClient {
     this.globalRequestArgOptions = connectionConfig?.requestArgOptions;
 
     this.roles = new Roles(this);
+    this.users = new Users(this);
   }
 
   public async auth(credentials: Credentials) {
